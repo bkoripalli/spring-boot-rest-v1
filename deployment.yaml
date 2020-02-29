@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: v1deploy
+  name: v1deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: v1deploy
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: v1deploy
+    spec:
+      containers:
+      - image: docker.io/testdocker9spring/spring-boot-rest-v1
+        name: spring-boot-rest-v1
+        resources: {}
+status: {}
